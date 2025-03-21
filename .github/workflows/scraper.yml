@@ -22,7 +22,7 @@ jobs:
         run: pip install selenium pandas webdriver-manager fake-useragent
 
       - name: Run Selenium scraper
-        run: python scraper.py
+        run: python "Assignment 5/main.py"
 
       - name: Commit and Push updated CSV
         run: |
