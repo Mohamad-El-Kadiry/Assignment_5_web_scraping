@@ -28,6 +28,6 @@ jobs:
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-          git add ebay_tech_deals.csv
+          git add "Assignment 5/ebay_tech_deals.csv"
           git commit -m "Updated eBay tech deals data (3-hour intervals)" || echo "No changes to commit"
           git push
