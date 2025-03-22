@@ -6,9 +6,14 @@ df = pd.read_csv(file_name, dtype=str)
 
 # Clean the price and original_price columns
 def clean_price(price):
-    if pd.isna(price) or price.strip() == "N/A":
+    if pd.isna(price) or price.strip() in ["N/A", ""]:
         return None
-    return float(price.replace("US $", "").replace(",", "").strip())
+    price = price.replace("US $", "").replace("$", "").replace(",", "").strip()
+    try:
+        return float(price)
+    except ValueError:
+        return None  # Return None if conversion fails
+
 
 df["price"] = df["price"].apply(clean_price)
 df["original_price"] = df["original_price"].apply(clean_price)
