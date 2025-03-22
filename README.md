@@ -46,7 +46,7 @@ Optimize Scraping Strategy
 Implement rotating proxies to avoid IP bans.
 Enhance Data Storage & Versioning
 
-Instead of appending to CSVwe might use:
+Instead of appending to CSV we might use:
 A database (SQLite, PostgreSQL) for structured storage.
 A hash-based de-duplication check before saving new records.
 Improve Data Quality
